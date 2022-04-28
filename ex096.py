@@ -9,3 +9,4 @@ def mensagem(txt):
 
 mensagem('Trigonometria')
 area(l =float(input('Lado A (m): ')), h = float(input('Lado B (m): ')))
+#teste de commit
