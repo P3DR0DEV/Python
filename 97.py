@@ -10,13 +10,13 @@ def contador(i, f, p):
         while c <= f:
             print(f'{c}', end=' ', flush=True)
             c += p 
-            sleep(0.5)
+            sleep(1)
         print('Fim!')
     else:
         while c>= f:
             print(f'{c}',end=' ', flush=True)
             c -= p
-            sleep(0.5)
+            sleep(1)
         print('Fim!')
 
 
@@ -25,4 +25,3 @@ contador(1, 10, 1)
 contador(10, 0, 2)
 lin('Faça o seu contador')
 contador(i = int(input('Inicio:')), f = int(input('Fim: ')), p = int(input('Passo: ')))
-        # commit
