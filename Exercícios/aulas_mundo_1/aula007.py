@@ -1,0 +1,14 @@
+n1 = int(input('Digite um valor:'))
+n2 = int(input('Outro valor:'))
+s = n1 + n2
+m = n1 * n2
+d = n1 / n2
+di = n1 // n2
+e = n1 ** n2
+r = n1 % n2
+print('A soma vale {}.'.format(s) ,end=' ')
+print('A multiplicação vale {}.' .format(m) ,end=' ')
+print('A divisão vale {:.2f}.' .format(d) ,end=' ') # {:.2f} equivale ao númeor de casas decimais, f representa que é um numero flutuante
+print('A divisão interia vale {}.' .format(di) ,end=' ')
+print('A exponenciação entre os dois números vale {}.' .format(e) ,end=' ')
+print('O resto da divisão entre os dois números equivale a {}.' .format(r) ,end=' ') 

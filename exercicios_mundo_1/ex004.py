@@ -1,0 +1,5 @@
+n1 = input('Digite algo:')
+print(type(n1))
+print('É um número:' ,n1.isnumeric())
+print('É alnum:' ,n1.isalnum())
+print('É decimal:' ,n1.isdecimal())
