@@ -21,3 +21,4 @@ ranking = sorted(jogo.items(), key = itemgetter(1), reverse = True)
 for i, v in enumerate(ranking):
     print(f'{i+1}º lugar: {v[0]}, tirou {v[1]}')
     sleep(1)
+

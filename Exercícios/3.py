@@ -22,3 +22,4 @@ b = a [:] #copia os valores da lista a, portanto se fizer uma mudança em uma li
 
 
 print(lanche)
+

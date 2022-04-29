@@ -21,3 +21,4 @@ for c in range(0,3):
     elif maior < matriz[1][c]:
         maior = matriz[1][c]
 print(f'O maior item da segunda linha equivale à: {maior}')
+

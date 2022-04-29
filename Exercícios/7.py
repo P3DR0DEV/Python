@@ -25,3 +25,4 @@ for i, l in enumerate(jogos):
     print(f'Jogo {i+1}: {l}')
     sleep(1)
 print('-=' * 20)
+

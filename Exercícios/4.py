@@ -6,3 +6,4 @@ for c in range(0,5):
     menor = min(valores)
 print(f'O maior número digitado foi {maior} e o menor foi {menor}')
 
+

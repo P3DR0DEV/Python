@@ -25,3 +25,4 @@ while True:
     elif resp == i:
         print(f'As notas de {lista[resp][0]} foram: {lista[resp][1]}.')
 print('Programa finalizado.')
+
