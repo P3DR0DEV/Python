@@ -1,8 +1,9 @@
 def notas(*n, sit= False):
     """
     -> Mostra as Notas, Quantidade, Maior, Menor e Média.
-    :param n: Dicionário onde está contida as notas.
-    :param sit: (Opicional) Mostra a situação do aluno baseado na média. 
+    :param n: Dicionário onde está contida as notas. (Aceita várias)
+    :param sit: (Opicional) Mostra a situação do aluno baseado na média.
+    :return: Dicionário com informações sobre a situação da Turma 
     """
     r = dict()
     r['Total'] = len(n)
@@ -20,3 +21,4 @@ def notas(*n, sit= False):
 
 resp = notas(6, 5, 5, 6, sit = True)
 print(resp)
+help(notas)
