@@ -1,10 +1,7 @@
-def fatorial(n):
-    f =1
-    for c in range(1 , n+1):
-        f *=c
-    return f
+import modulo
 
 
 num = int(input('Digite um Valor: '))
-fat = fatorial(num)
+fat = modulo.fatorial(num)
 print(f'O fatorial de {num} é {fat}')
+print(f'O dobro de {num} é {modulo.dobro(num)}')
