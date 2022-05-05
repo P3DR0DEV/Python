@@ -1,23 +1,32 @@
-def converter(preço=0, moeda = 'R$'):
-    return f'{moeda:.2f}{preço:.2f}'.replace(',', '.')
+def moeda(preço=0, moeda = 'R$ '):
+    return f'{moeda}{preço:.2f}'.replace('.', ',')
+
+def dobro(n, formato = False):
+    num = n *2
+    if formato:
+        return moeda(num)
+    else:
+        return num
 
 
-def dobro(n):
-    f = n *2
-    converter(f)
+def metade(n, formato = False):
+    num = n / 2
+    if formato:
+        return moeda(num)
+    else:
+        return num
 
 
+def aumentar(n, s= 10, formato = False):
+    num = n + (n * s/100)
+    if formato:
+        return moeda(num)
+    else:
+        return num
 
-def metade(n):
-    f = n / 2
-    converter(f)
-
-
-
-def aumentar(n, s= 10):
-    f =n + (n *s/100)
-    converter(f)
-
-def diminuir(n, s= 10):
-    f = n - (n * s/100)
-    converter(f) 
+def diminuir(n, s= 10, formato = False):
+    num = n - (n * s/100)
+    if formato:
+        return moeda(num) 
+    else:
+        return num
