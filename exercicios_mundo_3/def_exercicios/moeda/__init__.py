@@ -8,7 +8,7 @@ def metade(n):
     return f
 
 
-def aumentar(n, s):
+def aumentar(n, s= 10):
     f =n + (n *s/100)
     return f
 
