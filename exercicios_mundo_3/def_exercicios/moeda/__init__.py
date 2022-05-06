@@ -34,10 +34,10 @@ def diminuir(n, sub= 10, formato = False):
 
 def resumo(n, s, sub):
     print('-'*30)
-    print(f'{"RESUMO DO VALOR":^30}')
+    print(f'{"RESUMO DO VALOR":^30}') #ou print('Resumo do Valor' .center(30))
     print('-'*30)
     print(f'Preço Analizado:{moeda(n):>13}')
-    print(f'Dobro do Preço:{dobro(n , True):>14}')
+    print(f'Dobro do Preço:{dobro(n , True):>14}') #\t tabulação, transforma em uma tabela
     print(f'Metade do Preço:{metade(n , True):>13}')
     print(f'Aumentando {s}%:{aumentar(n , s , True):>14}')
     print(f'Diminuindo {sub}%:{diminuir(n, sub, True):>14}')
