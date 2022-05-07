@@ -1,6 +1,6 @@
-from def_exercicios import dados
-from def_exercicios import moeda
+from def_exercicios.moeda import resumo
+from def_exercicios.dados import leiadinheiro
 
 
-p = dados.leiadinheiro('Digite o preço: R$ ')
-moeda.resumo(p, 10, 10)
+p = leiadinheiro('Digite o preço: R$ ')
+resumo(p, 10, 10)
