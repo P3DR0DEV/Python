@@ -30,15 +30,15 @@ def lerArq(nome):
         print('--'*20)
         print('Pessoas Cadastradas'.center(40))
         print('--'*20)
-        print(arquivo.readlines())
+        print(f'{arquivo.readlines()}')
 
 
 
 def editArq(nome): #Edita o arquivo
     dict = {}
     arquivo = open(nome, 'w+')
-    dict['Nome'] =  str(input('Nome: '))
-    dict['Idade'] = int(input('Idade: '))
+    dict['Nome'] =  str(input('\033[33mNome: \033[m'))
+    dict['Idade'] = int(input('\033[33mIdade: \033[m'))
     lista.append(dict)
     arquivo.write(f'{lista}')
 
