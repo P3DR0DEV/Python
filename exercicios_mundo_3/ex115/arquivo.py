@@ -41,7 +41,7 @@ def cadastro(arq, nome = 'Desconhecido', idade = 0):
         print('Erro ao abrir o arquivo')
     else:
         try:
-            arquivo.write(f'{nome}{idade}\n')
+            arquivo.write(f'{nome:<30}{idade:3} anos\n')
         except:
             print('Houve um erro ao escrever no arquivo.')
         else:
