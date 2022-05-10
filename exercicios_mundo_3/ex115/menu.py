@@ -6,7 +6,7 @@ def leiaint(msg):
             print('\033[31mErro! Digite um número inteiro Válido.\033[m')
             continue
         except KeyboardInterrupt:
-            print('\n\033[31mO usuário preferiu não digitar um número\033[m')
+            print('\n\033[31mO usuário preferiu não digitar um número.\033[m')
             return None
         else:
             return n
