@@ -1,4 +1,3 @@
-lista = []
 def existeArq(nome): #verifica se o arquivo.txt existe
     try:
         arquivo = open(nome, 'rt')
@@ -23,26 +22,29 @@ def lerArq(nome):
     #Le o arquivo nome.txt
     try:
         arquivo = open(nome, 'rt')
-        lista.clear()
     except:
         print('Erro ao ler o arquivo')
     else:
         print('--'*20)
         print('Pessoas Cadastradas'.center(40))
         print('--'*20)
-        print(f'{arquivo.readlines()}')
+        print(f'{arquivo.read()}')
+    finally:
+        arquivo.close()
 
 
 
-def editArq(nome): #Edita o arquivo
-    dict = {}
-    arquivo = open(nome, 'w+')
-    dict['Nome'] =  str(input('\033[33mNome: \033[m'))
-    dict['Idade'] = int(input('\033[33mIdade: \033[m'))
-    lista.append(dict)
-    arquivo.write(f'{lista}')
+def cadastro(arq, nome = 'Desconhecido', idade = 0):
+    try: 
+        arquivo = open(arq, 'at')
+    except:
+        print('Erro ao abrir o arquivo')
+    else:
+        try:
+            arquivo.write(f'{nome}{idade}\n')
+        except:
+            print('Houve um erro ao escrever no arquivo.')
+        else:
+            print(f'Novo registro de {nome}.')
+            arquivo.close
 
-
-def addList(nome):
-    arquivo = open(nome, 'w+')
-    arquivo.write(f'{lista}')
