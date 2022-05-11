@@ -21,7 +21,7 @@ def criarArq(nome): # cria um arquivo.txt caso não exista
 def lerArq(nome):
     #Le o arquivo nome.txt
     try:
-        arquivo = open(nome, 'rt')
+        arquivo = open(nome, 'rt', encoding='utf-8')
     except:
         print('Erro ao ler o arquivo')
     else:
@@ -36,7 +36,7 @@ def lerArq(nome):
 
 def cadastro(arq, nome = 'Desconhecido', idade = 0):
     try: 
-        arquivo = open(arq, 'at')
+        arquivo = open(arq, 'at', encoding='utf-8')
     except:
         print('Erro ao abrir o arquivo')
     else:
@@ -48,3 +48,11 @@ def cadastro(arq, nome = 'Desconhecido', idade = 0):
             print(f'Novo registro de {nome}.')
             arquivo.close
 
+
+def apagaArq(arq):
+    try:
+        arquivo = open(arq, 'wt')
+    except:
+        print('Arquivo não encontrado.')
+    else:
+        arquivo.write('')

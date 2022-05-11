@@ -20,4 +20,6 @@ while True:
     elif resp == 3:
         print('\033[31mO usuário escolheu sair.\033[m')
         break
+    elif resp == 4:
+        arquivo.apagaArq()
         
