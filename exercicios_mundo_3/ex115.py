@@ -5,7 +5,7 @@ if not arquivo.existeArq(arq):
     arquivo.criarArq(arq)
 
 while True:
-    resp = menu.titulo('Ver Usuários Cadastrados', 'Cadastrar um Novo Usuário' , 'Sair do Sistema')
+    resp = menu.titulo('Ver Usuários Cadastrados', 'Cadastrar um Novo Usuário' , 'Sair do Sistema', 'Apagar Usuários')
     if resp == 1:
         #lista o conteúdo do arquivo
         arquivo.lerArq(arq)
@@ -21,5 +21,5 @@ while True:
         print('\033[31mO usuário escolheu sair.\033[m')
         break
     elif resp == 4:
-        arquivo.apagaArq()
+        arquivo.apagaArq(arq)
         
