@@ -1,4 +1,4 @@
-def ponto_habilidade():
+def ponto_habilidade(vida, arq= 0, mago= 0, warrior= 0):
     pontos = {}
     while True:
         s = 0
@@ -14,9 +14,11 @@ def ponto_habilidade():
             break
         elif s <5:
             print(f'Adicione mais {5 - s} pontos e selecione 0 nos que não deseja adicionar mais .')  
-    pontos['Força'] = int(força) 
+    classe = arq + mago + warrior 
+    pontos['Força'] = int(força)  + classe 
     pontos['Armadura'] = int(armadura)
     pontos['Dex'] = int(dex)
+    pontos['Vida'] = int(vida)
     print(pontos)
 
 
