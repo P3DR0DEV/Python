@@ -2,11 +2,12 @@ from datetime import datetime
 
 
 class Cliente:
+     
     def __init__(self, nome, sobrenome, cpf):
         self.nome = nome 
         self.sobrenome = sobrenome
         self.cpf = cpf
-
+        
 
 class Historico:
     def __init__(self) -> None:
@@ -20,7 +21,9 @@ class Historico:
             print('-', t)
 
 class Conta:
-
+    
+    _total_contas = 0
+    
     #método init inicia o objeto, já o __new__ cria um objeto
     def __init__(self,numero, cliente, saldo, limite = 500.0): 
         self.numero = numero
@@ -28,6 +31,7 @@ class Conta:
         self.saldo = saldo
         self.limite = limite
         self.historico = Historico()   #Variável passa a retomar a Classe Histórico 
+        Conta._total_contas += 1
 
 
     def sacar(self, quant):
@@ -73,5 +77,9 @@ class Conta:
         print(f'Número = {self.numero} \nTitular = {self.titular} \nSaldo = {self.saldo} \nLimite = {self.limite}')
         print('-'*20)
 
+    @classmethod
+    def get_total_contas(cls): 
+        print(f'Total de contas cadastradas: {cls._total_contas}') 
+        #se return, precisa de um print no main
 
     
